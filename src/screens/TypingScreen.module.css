@@ -1,0 +1,130 @@
+.line {
+  font-size: 28px;
+  line-height: 2;
+}
+
+.textContainer {
+  width: 100%;
+  max-width: 1000px;
+  height: 17rem; /* Restricts viewport to roughly 3-4 visible lines */
+  overflow-y: scroll; /* Allows container-level scroll movements */
+  position: relative;
+  margin: 0 auto;
+
+  padding: 10px;
+  border-bottom: 1px solid;
+  /* margin-top: 3rem; */
+
+  /* Hides native browser scrollbars for a cleaner, modern interface */
+  scrollbar-width: none;
+}
+
+.textContainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* 🚫 FIX FOR BREAKING WORDS */
+.textInner {
+  display: block; /* Changed from flex to block for flawless natural text wrapping */
+  line-height: 40px;
+  padding: 40px 0;
+  text-align: left;
+  word-break: break-word; /* Drops whole words down instead of single letters */
+
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}
+
+.backBtn {
+  margin-left: -14px;
+}
+
+/* IDLE TIMEOUT BADGE */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.idleBadge {
+  background-color: #ff9800;
+  color: #000;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.char {
+  font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.6rem;
+  color: #666;
+  white-space: pre-wrap; /* Retains essential paragraph spaces & line breaks */
+
+  position: relative;
+}
+
+.correct {
+  color: #4caf50;
+  /* background-color: rgba(76, 175, 80, 0.2); */
+}
+
+.wrong {
+  color: #ff5252;
+  background-color: rgba(255, 82, 82, 0.2);
+}
+
+.current {
+  color: #ffffff;
+  border-bottom: 2px solid #2196f3;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.caret {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 2px;
+  height: 1.2em;
+  background: #10b981;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/*
+    The Joaquin Academy’s senior group.
+Five senior officials who are part of the Joaquin Academy’s
+top leadership. They are gloomy old men who have buried
+themselves in the shadows and are meddling in the world’s
+most prestigious Joaquin Academy.
+Some may say that the head of the academy is the highest
+authority. I can only give an ambiguous answer to that
+question.
+It is the responsibility of the academy director to review and
+approve major issues within the academy.
+First, because Joaquin Academy is a place where children
+from prestigious families from all over the world gather, it is
+impossible for just one director to wield power.
+As much as the Joaquin Academy has a place in this world,
+the things that happen at the Academy are more than just
+local issues. If the head of the academy were to abuse his
+power, the repercussions would not be limited to the
+academy, but could spread to the social problems of the
+upper echelons.
+It was against this backdrop that the Joaquin Academy
+Elders were born. They have been keeping the past heads of
+the academy in check by asserting their legitimacy as
+descendants of five of the seven disciples of Balor Joaquin,
+the founder of the academy
+ */

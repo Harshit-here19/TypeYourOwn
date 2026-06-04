@@ -1,0 +1,112 @@
+/* Container card with frosted glass/cyberpunk blend */
+.congratsWindow {
+  text-align: center;
+  background: linear-gradient(145deg, #1e1e24, #121215);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 50px 40px;
+  max-width: 520px;
+  margin: 60px auto;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 
+              0 0 40px rgba(16, 185, 129, 0.05); /* Very subtle ambient green glow */
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  animation: scaleIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.congratsWindow h2 {
+  color: #10b981; /* Emerald green */
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.5px;
+  text-shadow: 0 4px 20px rgba(16, 185, 129, 0.2);
+}
+
+.congratsWindow p {
+  color: #9ca3af; /* Soft slate gray */
+  font-size: 1.05rem;
+  margin: 0 0 35px 0;
+}
+
+/* Row wrapper for stats data cards */
+.finalStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+/* Individual feature styling for each metric box */
+.finalStats > div {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 20px 10px;
+  border-radius: 16px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.finalStats > div:hover {
+  transform: translateY(-4px);
+  border-color: rgba(16, 185, 129, 0.3);
+  background: rgba(16, 185, 129, 0.02);
+}
+
+/* Dynamic colors assigned per dashboard metric box */
+.finalStats div:nth-child(1) h3 { color: #10b981; } /* WPM - Green */
+.finalStats div:nth-child(2) h3 { color: #3b82f6; } /* Accuracy - Blue */
+.finalStats div:nth-child(3) h3 { color: #f59e0b; } /* Time - Amber */
+
+.finalStats h3 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin: 0;
+  font-family: 'SF Mono', monospace;
+  letter-spacing: -1px;
+}
+
+.finalStats p {
+  margin: 6px 0 0 0;
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Re-styled action button with rich hover metrics */
+.actionBtn {
+  width: 100%;
+  background-color: #10b981;
+  color: #042f1a;
+  border: none;
+  padding: 16px 32px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.25);
+}
+
+.actionBtn:hover {
+  background-color: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(16, 185, 129, 0.4);
+}
+
+.actionBtn:active {
+  transform: translateY(0);
+}
+
+/* Entry Animation */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
